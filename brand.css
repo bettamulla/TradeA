@@ -1,0 +1,27 @@
+/* v5.4 brand pack: darker base + retro-only logo */
+:root {
+  --bg: #050607;
+  --panel: #0a0d12;
+  --border: #1d2433;
+}
+/* Persistent top-left logo badge */
+.logo-badge {
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  image-rendering: pixelated;
+  display: none;
+}
+/* Show only in Retro/Dark mode */
+body.retro .logo-badge,
+[data-theme="retro"] .logo-badge {
+  display: inline-block;
+}
+/* Slight glow so it pops without blur */
+body.retro .logo-badge {
+  filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.35)) drop-shadow(0 0 10px rgba(0, 200, 120, 0.15));
+}
+/* Optional: darker header to blend */
+.topbar, .app-header {
+  background: var(--bg);
+}
