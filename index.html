@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>TradeA v5.4 Brand Demo</title>
+  <link rel="stylesheet" href="brand.css">
+  <link rel="icon" type="image/png" href="assets/tradea-icon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    body{background:#050607;color:#e6f0ff;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0}
+    .topbar{position:sticky;top:0;display:flex;align-items:center;gap:12px;padding:8px 12px;border-bottom:1px solid #1d2433}
+    .content{padding:16px}
+    .toggle{margin-left:auto}
+    .btn{padding:6px 10px;border:1px solid #293048;background:#0a1122;color:#e6f0ff;cursor:pointer}
+  </style>
+  <script src="brand.js"></script>
+<script src="brand.js" defer></script>
+</head>
+<body class="retro">
+  <div class="topbar">
+    <div class="toggle"><button class="btn" id="themeBtn">Toggle Classic/Retro</button></div>
+  </div>
+  <div class="content">
+    <h1>TradeA Brand Pack v5.4 Demo</h1>
+    <p>This minimal page shows how the badge appears only in Retro mode.</p>
+  </div>
+  <script>
+    document.getElementById('themeBtn').onclick = ()=>{
+      document.body.classList.toggle('retro');
+    };
+  </script>
+</body>
+</html>
+<section id="ai" class="panel">
+  <div class="row">
+    <div class="card"><h2>AI Advisor</h2><button id="aiRefresh">Analyze</button><div class="hint">Uses your OpenAI key for summaries.</div></div>
+    <div class="card grow"><h3>Summary</h3><div id="aiSummary" class="list"></div></div>
+  </div>
+</section>
